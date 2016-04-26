@@ -9,4 +9,5 @@ Draws a chart from completed studies information from weboodi using nvd3js and a
 
 ##usage
 http://felixlin.users.cs.helsinki.fi/opgraafi/
+
 to use, copy&paste text from your completed studies page to the input field, set your starting semester and press "piirrä kuvaaja"
