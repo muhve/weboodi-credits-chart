@@ -1,0 +1,45 @@
+<html ng-app="opGrafApp">
+  <head>
+    <meta charset="utf-8">
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/d3/d3.js"></script>
+    <script src="bower_components/nvd3/build/nv.d3.js"></script>
+    <script src="bower_components/angular-nvd3/dist/angular-nvd3.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="bower_components/nvd3/build/nv.d3.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Next level opintopistegraafi</title>
+  </head>
+  <body ng-controller="OpGrafCtrl">
+    <div class="container">
+      <div class="row">
+        <div class="form-group">
+          <textarea class="form-control" ng-model="rawInput" placeholder="kopioi weboodin suoritussivun sisältö tähän"></textarea>
+        </div>
+        <div class="form-inline">
+          <label>aloituslukukausi:</label>
+          <input type="number" class="form-control" ng-model="year"></input>
+          <select class="form-control" ng-model="semester">
+            <option value="8">Syksy</option>
+            <option value="0">Kevät</option>
+          </select>
+          <button class="form-control" ng-click="update()">Piirrä kuvaaja</button>
+        </div>
+      </div>
+      <nvd3 options="options" data="data"></nvd3>
+    </div>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-41331116-3', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+
+  </body>
+</html>
